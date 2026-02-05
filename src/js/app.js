@@ -8,14 +8,14 @@ var VotingContract = contract(votingArtifacts)
 
 
 window.App = {
-  eventStart: function() { 
-    window.ethereum.request({ method: 'eth_requestAccounts' });
+  eventStart: async function() { 
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     VotingContract.setProvider(window.ethereum)
-    VotingContract.defaults({from: window.ethereum.selectedAddress,gas:6654755})
+    VotingContract.defaults({from: accounts[0], gas:6654755})
 
     // Load account data
-    App.account = window.ethereum.selectedAddress;
-    $("#accountAddress").html("Your Account: " + window.ethereum.selectedAddress);
+    App.account = accounts[0];
+    $("#accountAddress").html("Your Account: " + accounts[0]);
     VotingContract.deployed().then(function(instance){
      instance.getCountCandidates().then(function(countCandidates){
 

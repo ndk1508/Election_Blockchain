@@ -1,37 +1,37 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Voting Page</title>
+    <title>Trang Bỏ Phiếu</title>
 
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     
   </head>
   <body>
     <div id="head" class="text-center">
-      <h1 align="center">Decentralized Voting Using Ethereum Blockchain</h1>
-      <h2 align="center">Welcome for Voting</h2> 
-      <h3 align="center"><p>Voting Dates: <span id="dates"></span></p></h3>
+      <h1 align="center">Hệ Thống Bỏ Phiếu Phi Tập Trung Sử Dụng Ethereum Blockchain</h1>
+      <h2 align="center">Chào Mừng Đến Với Trang Bỏ Phiếu</h2> 
+      <h3 align="center"><p>Thời Gian Bầu Cử: <span id="dates"></span></p></h3>
       <br/> 
     </div>
     <div id="candidate" class="container"> 
       <table class="table text-center">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Party</th>
-            <th>Total Vote</th>
+            <th>Tên Ứng Cử Viên</th>
+            <th>Đảng Phái</th>
+            <th>Tổng Số Phiếu</th>
           </tr>
         </thead>
         <tbody id="boxCandidate"></tbody>
       </table>
       <br/>
       <div id="vote">
-        <p>Please select one of the candidates and click the vote button.</p>
-        <button id="voteButton" class="btn btn-primary" onclick="App.vote()" disabled>Vote</button>
+        <p>Vui lòng chọn một ứng cử viên và nhấn nút bỏ phiếu.</p>
+        <button id="voteButton" class="btn btn-primary" onclick="App.vote()" disabled>Bỏ Phiếu</button>
         <div id="msg"></div>
   
         <div id="vote-box"></div>
